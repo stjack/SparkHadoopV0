@@ -23,7 +23,7 @@ RUN apt-get update \
  && apt-get install -y curl unzip \
     python3-pip python3-setuptools \
  && ln -s /usr/bin/python3 /usr/bin/python \
- && pip3 install --upgrade pip   
+ && pip3 install --upgrade pip   \
  && easy_install3 py4j \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
