@@ -24,7 +24,9 @@ RUN apt-get update \
     python3-pip python3-setuptools \
  && ln -s /usr/bin/python3 /usr/bin/python \
  && pip3 install --upgrade pip   \
- && easy_install3 py4j \
+ && pip3 install py4j \
+ && pip3 install numpy \
+ && pip3 install pandas \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
