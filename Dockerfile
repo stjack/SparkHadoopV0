@@ -1,6 +1,4 @@
 # spark.dockerfile
-FROM gettyimages/spark
-
 FROM debian:stretch
 MAINTAINER Getty Images "https://github.com/gettyimages"
 
@@ -35,7 +33,7 @@ RUN apt-get update \
  && pip3 install pymssql \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
-
+RUN cp -f -R oracle/*.* /usr/share/java/ && ls -all /usr/share/java/
 # http://blog.stuart.axelbrooke.com/python-3-on-spark-return-of-the-pythonhashseed
 ENV PYTHONHASHSEED 0
 ENV PYTHONIOENCODING UTF-8
