@@ -34,6 +34,10 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/oracle/ojdbc8.jar -o /usr/share/java/ojdbc8.jar
+RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/oracle/ojdbc.policy -o /usr/share/java/ojdbc.policy
+RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/oracle/ucp.jar -o /usr/share/java/ucp.jar
+RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/oracle/xdb6.jar -o /usr/share/java/xdb6.jar
+RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/oracle/oraclepki.jar -o /usr/share/java/oraclepki.jar
 # http://blog.stuart.axelbrooke.com/python-3-on-spark-return-of-the-pythonhashseed
 ENV PYTHONHASHSEED 0
 ENV PYTHONIOENCODING UTF-8
