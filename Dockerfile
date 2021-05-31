@@ -24,6 +24,7 @@ RUN apt-get update \
     python3-pip python3-setuptools \
     libpostgresql-jdbc-java \ 
     libpostgresql-jdbc-java-doc \
+    libmysql-java \
  && ln -s /usr/bin/python3 /usr/bin/python \
  && pip3 install --upgrade pip   \
  && pip3 install py4j \
