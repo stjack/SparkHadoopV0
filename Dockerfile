@@ -22,6 +22,8 @@ ENV LC_ALL en_US.UTF-8
 RUN apt-get update \
  && apt-get install -y curl unzip \
     python3-pip python3-setuptools \
+    libpostgresql-jdbc-java \ 
+    libpostgresql-jdbc-java-doc \
  && ln -s /usr/bin/python3 /usr/bin/python \
  && pip3 install --upgrade pip   \
  && pip3 install py4j \
