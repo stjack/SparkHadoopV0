@@ -33,7 +33,7 @@ RUN apt-get update \
  && pip3 install pymssql \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
-RUN cp -f -R oracle/*.* /usr/share/java/ && ls -all /usr/share/java/
+RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/oracle/ojdbc8.jar -o /usr/share/java/ojdbc8.jar
 # http://blog.stuart.axelbrooke.com/python-3-on-spark-return-of-the-pythonhashseed
 ENV PYTHONHASHSEED 0
 ENV PYTHONIOENCODING UTF-8
