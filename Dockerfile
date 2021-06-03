@@ -38,6 +38,9 @@ RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/oracle/ojdbc.policy 
 RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/oracle/ucp.jar -o /usr/share/java/ucp.jar
 RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/oracle/xdb6.jar -o /usr/share/java/xdb6.jar
 RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/oracle/oraclepki.jar -o /usr/share/java/oraclepki.jar
+## Adding support for Azure-hadoop drivers
+RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/drivers/azure-storage-8.6.6.jar -o /usr/share/java/azure-storage-8.6.6.jar
+RUN curl  https://github.com/stjack/SparkHadoopV0/tree/main/drivers/hadoop-azure-3.3.0.jar -o /usr/share/java/hadoop-azure-3.3.0.jar
 # http://blog.stuart.axelbrooke.com/python-3-on-spark-return-of-the-pythonhashseed
 ENV PYTHONHASHSEED 0
 ENV PYTHONIOENCODING UTF-8
